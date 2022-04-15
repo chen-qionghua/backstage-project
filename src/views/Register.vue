@@ -63,11 +63,11 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 const ruleFormRef = ref<FormInstance>();
 const registerUser = ref<registerType>({
-  name: "npc",
-  email: "1169121469@qq.com",
-  password: "123456",
-  password2: "123456",
-  identity: "管理员",
+  name: "",
+  email: "",
+  password: "",
+  password2: "",
+  identity: "",
 });
 const handleSubmit = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
@@ -79,7 +79,7 @@ const handleSubmit = (formEl: FormInstance | undefined) => {
       );
       // @ts-ignore
       ElMessage({
-        message: "注册成功，跳转至首页.",
+        message: "注册成功，跳转至登录页面.",
         type: "success",
       });
       router.push("/");

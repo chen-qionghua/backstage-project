@@ -12,13 +12,7 @@ export const useAuthStore = defineStore('auth', {
     getUser:(state) => state.user
   },
   actions: {
-    // setAuth(isAuth:boolean) {
-    //   if(isAuth){
-    //   this.isAuthenticated = isAuth
-    //   }else{
-    //     this.isAuthenticated = false
-    //   }
-    // },
+
     setAuth(isAuth:boolean){
       this.isAuthenticated = isAuth
     },

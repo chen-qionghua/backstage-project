@@ -3,7 +3,9 @@ import { watchEffect } from "vue";
 import jwt_decode from "jwt-decode";
 import { useAuthStore } from "./store/index";
 import { userType } from "./utils/types";
-
+//汉化elementui
+import { ElConfigProvider } from "element-plus";
+import zhCn from "element-plus/lib/locale/lang/zh-cn";
 const store = useAuthStore();
 
 watchEffect(() => {
@@ -17,7 +19,9 @@ watchEffect(() => {
 </script>
 
 <template>
-  <router-view></router-view>
+  <el-config-provider :locale="zhCn">
+    <router-view></router-view>
+  </el-config-provider>
 </template>
 
 <style lang="scss">

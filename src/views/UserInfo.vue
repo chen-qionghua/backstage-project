@@ -10,25 +10,27 @@
       <el-col :span="16">
         <div class="userinfo">
           <div class="user-item">
-            <i class="fa fa-user"></i>
+            <i class="fa fa-user">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-idCard"></use>
+              </svg>
+            </i>
             <span>{{ store.user.name }}</span>
           </div>
           <div class="user-item">
-            <i class="fa fa-cog"></i>
+            <i class="fa fa-cog">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-userName"></use>
+              </svg>
+            </i>
             <span>{{
-              store.user.identity === "manager" ? "管理员" : "员工"
+              store.user.identity === "employee" ? "员工" : "管理员"
             }}</span>
           </div>
         </div>
       </el-col>
     </el-row>
   </div>
-  <!-- <svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-idCard"></use>
-  </svg>
-  <svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-userName"></use>
-  </svg> -->
 </template>
 
 
@@ -46,7 +48,6 @@ console.log("zzzz");
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background: 1px solid red;
 
   /* padding: 16px; */
 }

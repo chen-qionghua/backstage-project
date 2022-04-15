@@ -53,8 +53,8 @@ const store = useAuthStore();
 const router = useRouter();
 const ruleFormRef = ref<FormInstance>();
 const loginUser = ref<registerType>({
-  email: "1169121469@qq.com",
-  password: "123456",
+  email: "",
+  password: "",
 });
 const handleSubmit = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
